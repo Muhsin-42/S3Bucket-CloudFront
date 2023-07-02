@@ -11,7 +11,7 @@ const cloudFrontDomainUrl  = process.env.CLOUDFRONT_URL || '';
 const cloudfrontKeyPairId  = process.env.CLOUDFRONT_KEY_PAIR_ID || '';
 const cloudfrontPrivateKey = process.env.CLOUDFRONT_PRIVATE_KEY || '';
 
-app.get('/image', async (req: Request, res: Response) => {
+app.get('/api/image', async (req: Request, res: Response) => {
   try {
     const date = new Date(Date.now() + 5 * 60000);
     let fileUrl = getSignedUrl({
